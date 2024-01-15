@@ -1,0 +1,40 @@
+; J9776A Configuration Editor; Created on release #YA.16.10.0009
+; Ver #14:41.44.00.04.19.02.13.98.82.34.61.18.28.f3.84.9c.63.ff.37.27:05
+hostname "PEKATL1SW01"
+web-management idle-timeout 7200
+ip default-gateway 10.20.90.250
+snmp-server community "scsnmp" operator
+snmp-server location "E&LP Switch Rack"
+vlan 10
+   name "Intranet"
+   untagged 1-20,25-27
+   tagged 21-24,28
+   no ip address
+   exit
+vlan 20
+   name "Intranet-WIFI"
+   tagged 1-28
+   no ip address
+   exit
+vlan 21
+   name "Intranet-WIFI"
+   tagged 1-28
+   no ip address
+   exit
+vlan 30
+   name "GUEST-WIFI"
+   tagged 1-28
+   no ip address
+   exit
+vlan 99
+   name "MGMT"
+   untagged 21-24
+   tagged 28
+   ip address 10.20.90.21 255.255.255.0
+   exit
+no tftp server
+no dhcp config-file-update
+no dhcp image-file-update
+no dhcp tr69-acs-url
+password manager
+
