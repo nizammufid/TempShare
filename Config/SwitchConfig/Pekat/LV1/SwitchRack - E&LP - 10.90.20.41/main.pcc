@@ -17,7 +17,7 @@ vlan 20
    no ip address
    exit
 vlan 21
-   name "Intranet-WIFI"
+   name "Intranet-WIFI2"
    tagged 1-28
    no ip address
    exit
